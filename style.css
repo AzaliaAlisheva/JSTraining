@@ -101,6 +101,9 @@ header nav {
 h2 {
     margin-top: 50px;
 }
+h3 {
+    margin-top: 60px;
+}
 #stack img {
     height: 50px;
 }
@@ -225,15 +228,7 @@ h2 {
     color: black;
 }
 
-#teamprojects h2 {
-    margin-top: 20px;
-}
-
 .first {
-    margin-top: 20px;
-}
-
-#teamprojects h3, #personalprojects h3 {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
