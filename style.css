@@ -98,12 +98,12 @@ header nav {
 /* #profile {
     max-width: 500px;
 } */
-h2 {
+
+
+#education h2, #experience h2, #personalprojects h2 {
     margin-top: 50px;
 }
-h3 {
-    margin-top: 60px;
-}
+
 #stack img {
     height: 50px;
 }
@@ -194,7 +194,7 @@ h3 {
     margin-right: 10px;
 }
 
-#experience ul {
+ul {
     list-style-type: circle;
 }
 
@@ -210,13 +210,39 @@ h3 {
 }
 
 #teamprojects ul, #personalprojects ul{
+    display: grid;
+    grid-template-rows: 210px 210px;
+    gap: 10px;
     list-style-type: none;
     padding: 0;
 }
 
-#teamprojects li, #personalprojects li {
-    width: 50%;
+#teamprojects ul {
+    grid-template-columns: 1fr 1fr 1.5fr;
+}
 
+#personalprojects ul{
+    grid-template-columns: 1.5fr 1fr 1fr;
+}
+
+#teamprojects li, #personalprojects li {
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+#teamprojects h4, #personalprojects h4 {
+    margin-bottom: 0;
+}
+
+#aiijc {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+
+#maps {
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
 }
 
 #teamprojects span, #personalprojects span {
@@ -226,9 +252,32 @@ h3 {
 
 #teamprojects a, #personalprojects a {
     color: black;
+    word-break: break-all;
 }
 
-.first {
+.full {
+    margin-left: 0;
+}
+
+.headericon {
+    height: 50px;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+#imgInfo {
+    display: inline-block;
+    vertical-align: top;
     margin-top: 20px;
+    margin-left: 30px;
+    text-align: left;
 }
 
+#comic {
+    text-align: center;
+}
+
+#comic img {
+    max-height: 80vh;
+    max-width: 80%;
+}

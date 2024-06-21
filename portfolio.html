@@ -22,18 +22,19 @@
             <a href="./about.html">About Me</a>
             <a href="./photos.html">Photos</a>
             <a href="./portfolio.html" class="disabled">Portfolio</a>
+            <a href="./labs.html">Labs</a>
         </nav>
     </header>
     <main>
         <div id="teamprojects">
-        <h2 class="first">Team projects</h2>
+        <h2>Team projects</h2>
             <ul>
-                <li>
-                    <h3 class="first">AIIJC edtech: technology of personalizing education</h3>
+                <li id="aiijc">
+                    <h4>AIIJC edtech: technology of personalizing education</h4>
                     <p><span>Aim:</span> define which of the following topics <b>animals</b>, <b>literature</b>,
                     <b>music</b> and <b>sports</b> is relevant to the input text and find keywords
                     relevant to the chosen topic.</p>
-                    <p><span>Process:</span><br>
+                    <!-- <p><span>Process:</span><br>
                     Firstly, we scraped Wikipedia, Wordassociation, Reright pages for
                     creating keyword dictionaries for each topic. Secondly, using the
                     Wikiwordnet module we added words from topic names' synsets
@@ -46,18 +47,18 @@
                     topic is the one related to this dot product. Lastly, we count the
                     cosine similarity of each word of the input text embedding and
                     embedding of the predicted topic. Words with values nearest to
-                    1 are our keywords.</p>
+                    1 are our keywords.</p> -->
                     <p><span>Result:</span><br>
                     As a result, we created a PyQT5 GUI (Graphical User Interface),
                     where the user inputs text, chooses how many keywords he
                     needs and gets the topic with keywords.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/AzaliaAlisheva/AIIJCEdtech">https://github.com/AzaliaAlisheva/AIIJCEdtech</a></p>
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/AzaliaAlisheva/AIIJCEdtech">https://github.com/AzaliaAlisheva/AIIJCEdtech</a></p>
                 </li>
                 <li>
-                    <h3>Module for Telegram-bot, which matches users by interests</h3>
+                    <h4>Module for Telegram-bot, which matches users by interests</h4>
                     <p><span>Aim:</span> find several people with similar interests to a user, discover
                         and try to use different ML techniques</p>
-                    <p><span>Process:</span><br>
+                    <!-- <p><span>Process:</span><br>
                         In the beginning, we processed json file with answers to the
                         questionnaire and made a table, where we could find out a
                         person's gender and interests by id. Then we created tables with
@@ -68,55 +69,55 @@
                         by interests but it had a very bad Roc Auc Score (0,52 it means
                         that the flip of the coin can predict gender not much worse).
                         After that, using NMF module we separated all the interests into
-                        groups of 3 with similar contexts.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/AzaliaAlisheva/Lanit">https://github.com/AzaliaAlisheva/Lanit</a></p>
+                        groups of 3 with similar contexts.</p> -->
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/AzaliaAlisheva/Lanit">https://github.com/AzaliaAlisheva/Lanit</a></p>
                 </li>
                 <li>
-                    <h3>Telegram-bot interlocutor</h3>
+                    <h4>Telegram-bot interlocutor</h4>
                     <p><span>Aim:</span> create Telegram-bot, which can give replies in Russian and English and calculate
                         math problems</p>
-                    <p><span>Process:</span><br>
+                    <!-- <p><span>Process:</span><br>
                         At the start, we created preprocess functions, which split the text into tokens (words),
                         and applied lemmatization or stemming (discarding word endings). Then we made
                         <b>Pushkin skill</b> based on tf-idf vectorizer (a module that counts the importance of words
                         based on their text and sentence frequency). It answers Russian messages. For English
                         messages, we created <b>Eliza skill</b>. Also, we added <b>Math skill</b> to calculate math
                         problems and <b>Deep skill</b> based on Bert model. All the skills are implemented by Bot
-                        class, where we wrote the structure for Telegram-bot.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/awwaw/HSE_bot">https://github.com/awwaw/HSE_bot</a></p>
+                        class, where we wrote the structure for Telegram-bot.</p> -->
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/awwaw/HSE_bot">https://github.com/awwaw/HSE_bot</a></p>
                 </li>
             </ul>
         </div>
         <div id="personalprojects">
             <h2>Personal projects</h2>
             <ul>
-                <li>
-                    <h3 class="first">YandexMaps API</h3>
+                <li id="maps">
+                    <h4>YandexMaps API</h4>
                     <p><span>Aim:</span> show a map of the input place with chosen scale, language and unit of
                         measurement</p>
-                    <p><span>Process:</span><br>
+                    <!-- <p><span>Process:</span><br>
                         Firstly, I needed to get a YandexMaps API key. Then I created json entity with this key
                         and input place. Then using the requests library I sent the request with our json and got
                         the coordinates of this place. Then I created another json entity with coordinates and
-                        chosen parameters to request a picture.</p>
+                        chosen parameters to request a picture.</p> -->
                     <p><span>Result:</span><br>
                         As a result, I created a Tkinter GUI, where the user inputs the address, chooses scale,
                         language and unit of measurement and gets the picture.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/AzaliaAlisheva/YandexMapsAPI">https://github.com/AzaliaAlisheva/YandexMapsAPI</a></p>
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/AzaliaAlisheva/YandexMapsAPI">https://github.com/AzaliaAlisheva/YandexMapsAPI</a></p>
                 </li>
                 <li>
-                    <h3>Investment test Django app</h3>
+                    <h4>Investment test Django app</h4>
                     <p><span>Result:</span><br>
                         A website where you can post some investment information, take part in a quiz and
                         monitor stocks.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/AzaliaAlisheva/InvestmentTest">https://github.com/AzaliaAlisheva/InvestmentTest</a></p>
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/AzaliaAlisheva/InvestmentTest">https://github.com/AzaliaAlisheva/InvestmentTest</a></p>
                 </li>
                 <li>
-                    <h3>Creating API Flask</h3>
+                    <h4>Creating API Flask</h4>
                     <p><span>Result:</span><br>
                         An API where you can post stores and fill them with items if you are an authorized user
                         and get all the info.</p>
-                    <p><span>GitHub page:</span> <a href="https://github.com/AzaliaAlisheva/CreatingAPIFlask">https://github.com/AzaliaAlisheva/CreatingAPIFlask</a></p>
+                    <p><span>GitHub page:</span><br> <a href="https://github.com/AzaliaAlisheva/CreatingAPIFlask">https://github.com/AzaliaAlisheva/CreatingAPIFlask</a></p>
                 </li>
             </ul>
         </div>
