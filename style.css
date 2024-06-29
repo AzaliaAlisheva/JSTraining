@@ -273,7 +273,6 @@ ul {
 #imgInfo {
     display: inline-block;
     vertical-align: top;
-    margin-top: 20px;
     margin-left: 30px;
     text-align: left;
 }
@@ -285,4 +284,24 @@ ul {
 #comic img {
     max-height: 80vh;
     max-width: 80%;
+}
+
+#fromNow {
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+#imgInfo label{
+    display: flow;
+}
+
+#comicTitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+#releaseDate {
+    font-weight: bold;
+    margin-top: 20px;
 }
