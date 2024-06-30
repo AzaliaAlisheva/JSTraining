@@ -25,8 +25,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
-          path: build
+          name: dist
+          path: dist
       - name: List uploaded files
         run: ls -la .
   deploy:
@@ -40,8 +40,10 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: build-artifact
-          path: build
+          name: dist
+          path: .
+      - name: List uploaded files
+        run: ls -la .
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
