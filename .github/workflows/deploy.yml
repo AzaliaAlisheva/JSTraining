@@ -33,6 +33,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: List uploaded files
+        run: ls -la .
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
