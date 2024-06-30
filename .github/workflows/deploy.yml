@@ -20,6 +20,8 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+      - name: List uploaded files
+        run: ls -la .
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
