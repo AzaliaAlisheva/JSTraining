@@ -1,1 +1,1 @@
-function e(){document.getElementById("contact").innerHTML="You clicked me"}export{e as buttonclick};
+function e(){n.innerHTML="You clicked me"}const n=document.getElementById("contact");n.addEventListener("click",e);export{e as buttonclick};
