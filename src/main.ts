@@ -1,6 +1,8 @@
-export function buttonclick() {
-    button.innerHTML = "You clicked me";
-}
+/// <reference types="svelte" />
+import App from './App.svelte'
 
-const button = document.getElementById("contact") as HTMLButtonElement;
-button.addEventListener('click', buttonclick);
+const app = new App({
+  target: document.getElementById('app')!,
+})
+
+export default app
