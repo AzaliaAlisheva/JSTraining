@@ -31,3 +31,14 @@
         </li>
     </ul>
 </div>
+
+<style>
+    #personalprojects ul{
+        grid-template-columns: 1.6fr 1fr 1fr;
+    }
+
+    #maps {
+        grid-row: 1 / 3;
+        grid-column: 2 / 4;
+    }
+</style>

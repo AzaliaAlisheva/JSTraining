@@ -1,12 +1,15 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import {manageDisabled} from '../disabled'
-    onMount(() => {
-        manageDisabled('labsLink');
-    });
+    import { Link } from 'svelte-routing';
+
+    import Header from "../widgets/Header.svelte";
+    import Info from "../widgets/Info.svelte";
 </script>
 
-<h2>Labs</h2>
-<ul id="labs">
-    <li><a href="comic.html">Comic</a></li>
-</ul>
+<Info />
+<Header disabledLabel="Labs"/>
+<main>
+    <h2>Labs</h2>
+    <ul id="labs">
+        <li><Link to="/comic">Comic</Link></li>
+    </ul>
+</main>

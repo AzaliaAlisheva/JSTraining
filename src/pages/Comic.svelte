@@ -1,5 +1,7 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
     import { formatDistanceToNow } from "date-fns";
+    import BackHeader from '../widgets/BackHeader.svelte';
 
     interface Info {
         img: string,
@@ -41,7 +43,7 @@
         } as const;
         const date = document.createElement('label');
         date.textContent = event.toLocaleDateString(undefined, options);
-        date.id = 'releaseDate';
+        date.id = 'release-date';
         return date;
     }
 
@@ -56,22 +58,22 @@
         displayedInfo.textContent = '';
         const title = document.createElement('label');
         title.textContent = info.safe_title;
-        title.id = "comicTitle";
+        title.id = "comic-title";
         displayedInfo.appendChild(title);
 
         const event = new Date(Date.UTC(info.year, info.month - 1, info.day));
         displayedInfo.appendChild(createDateString(event));
 
         const fromNow = document.createElement('label');
-        fromNow.id = "fromNow";
+        fromNow.id = "from-now";
         fromNow.textContent = `Released ${formatDistanceToNow(event)} ago`;
         displayedInfo.appendChild(fromNow);
     }
 
-    display();
+    onMount(display);
 </script>
 
-<header class="full"><a href="../#/labs"><img src="./img/white_back_arrow.png" alt="White back arrow" class="headericon"></a></header>
+<BackHeader />
 <main class="full" id="comic">
-    <div id="imgInfo">Loading...</div>
+    <div id="img-info">Loading...</div>
 </main>

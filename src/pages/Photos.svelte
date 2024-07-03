@@ -1,43 +1,57 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-    import {manageDisabled} from '../disabled'
-    onMount(() => {
-        manageDisabled('photosLink');
-    });
+    import Header from "../widgets/Header.svelte";
+    import Info from "../widgets/Info.svelte";
+
+    interface Photo {
+        src: string,
+        alt: string
+    }
+
+    let photos: Photo[] = [
+        { src: "photos/lake.jpg", alt: "Lake" },
+        { src: "photos/horseriding.jpg", alt: "Horseriding" },
+        { src: "photos/UI-034.jpg", alt: "IU dance class" },
+        { src: "photos/UI-035.jpg", alt: "IU dance class" },
+        { src: "photos/bootcamp.jpg", alt: "IU dance class group" },
+        { src: "photos/classes.jpg", alt: "IU bootcamp class" },
+        { src: "photos/date2.jpg", alt: "Date" },
+        { src: "photos/date3.jpg", alt: "Date" },
+        { src: "photos/evil.jpg", alt: "Evil" },
+        { src: "photos/halloween.jpg", alt: "Halloween" },
+        { src: "photos/halloween2.jpg", alt: "Halloween" },
+        { src: "photos/halloween3.JPG", alt: "Halloween" },
+        { src: "photos/inno.jpg", alt: "Inno" },
+        { src: "photos/inno2.jpg", alt: "Inno" },
+        { src: "photos/inno3.jpg", alt: "Inno" },
+        { src: "photos/inno4.jpg", alt: "Inno" },
+        { src: "photos/inno5.jpg", alt: "Inno" },
+        { src: "photos/newyear5.jpg", alt: "New Year" },
+        { src: "photos/inno6.jpg", alt: "Inno" },
+        { src: "photos/inno7.jpg", alt: "Inno" },
+        { src: "photos/snowboarding2.jpg", alt: "Snowboarding" },
+        { src: "photos/snowboarding3.jpg", alt: "Snowboarding" },
+        { src: "photos/snowboarding4.jpg", alt: "Snowboarding" },
+        { src: "photos/snowboarding5.jpg", alt: "Snowboarding" },
+        { src: "photos/newyear.jpg", alt: "New Year" },
+        { src: "photos/newyear2.jpg", alt: "New Year" },
+        { src: "photos/newyear3.jpg", alt: "New Year" },
+        { src: "photos/newyear4.jpg", alt: "New Year" },
+        { src: "photos/birthday2.jpg", alt: "Birthday" },
+        { src: "photos/birthday3.jpg", alt: "Birthday" },
+        { src: "photos/birthday.jpg", alt: "Birthday" },
+        { src: "photos/meeting.webp", alt: "Meeting" },
+        { src: "photos/spring.jpg", alt: "Spring ball" },
+    ];
 </script>
 
-<div id="photos">
-    <figure><img src="photos/lake.jpg" alt="Lake"></figure>
-    <figure><img src="photos/horseriding.jpg" alt="Horseriding"></figure>
-    <figure><img src="photos/UI-034.jpg" alt="IU dance class"></figure>
-    <figure><img src="photos/UI-035.jpg" alt="IU dance class"></figure>
-    <figure><img src="photos/bootcamp.jpg" alt="IU dance class group"></figure>
-    <figure><img src="photos/classes.jpg" alt="IU bootcamp class"></figure>
-    <figure><img src="photos/date2.jpg" alt="Date"></figure>
-    <figure><img src="photos/date3.jpg" alt="Date"></figure>
-    <figure><img src="photos/evil.jpg" alt="Evil"></figure>
-    <figure><img src="photos/halloween.jpg" alt="Halloween"></figure>
-    <figure><img src="photos/halloween2.jpg" alt="Halloween"></figure>
-    <figure><img src="photos/halloween3.JPG" alt="Halloween"></figure>
-    <figure><img src="photos/inno.jpg" alt="Inno"></figure>
-    <figure><img src="photos/inno2.jpg" alt="Inno"></figure>
-    <figure><img src="photos/inno3.jpg" alt="Inno"></figure>
-    <figure><img src="photos/inno4.jpg" alt="Inno"></figure>
-    <figure><img src="photos/inno5.jpg" alt="Inno"></figure>
-    <figure><img src="photos/newyear5.jpg" alt="New Year"></figure>
-    <figure><img src="photos/inno6.jpg" alt="Inno"></figure>
-    <figure><img src="photos/inno7.jpg" alt="Inno"></figure>
-    <figure><img src="photos/snowboarding2.jpg" alt="Snowboarding"></figure>
-    <figure><img src="photos/snowboarding3.jpg" alt="Snowboarding"></figure>
-    <figure><img src="photos/snowboarding4.jpg" alt="Snowboarding"></figure>
-    <figure><img src="photos/snowboarding5.jpg" alt="Snowboarding"></figure>
-    <figure><img src="photos/newyear.jpg" alt="New Year"></figure>
-    <figure><img src="photos/newyear2.jpg" alt="New Year"></figure>
-    <figure><img src="photos/newyear3.jpg" alt="New Year"></figure>
-    <figure><img src="photos/newyear4.jpg" alt="New Year"></figure>
-    <figure><img src="photos/birthday2.jpg" alt="Birthday"></figure>
-    <figure><img src="photos/birthday3.jpg" alt="Birthday"></figure>
-    <figure><img src="photos/birthday.jpg" alt="Birthday"></figure>
-    <figure><img src="photos/meeting.webp" alt="Meeting"></figure>
-    <figure><img src="photos/spring.jpg" alt="Spring ball"></figure>
-</div>
+<Info />
+<Header disabledLabel="Photo"/>
+<main>
+    <div id="photos">
+        {#each photos as photo}
+            <figure>
+                <img src={photo.src} alt={photo.alt} />
+            </figure>
+        {/each}
+    </div>
+</main>

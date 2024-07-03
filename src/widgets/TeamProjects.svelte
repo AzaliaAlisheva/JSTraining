@@ -60,3 +60,14 @@
         </li>
     </ul>
 </div>
+
+<style>
+    #teamprojects ul {
+        grid-template-columns: 1fr 1fr 1.6fr;
+    }
+
+    #aiijc {
+        grid-row: 1 / 3;
+        grid-column: 1 / 3;
+    }
+</style>

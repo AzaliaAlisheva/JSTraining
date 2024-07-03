@@ -1,16 +1,14 @@
 <script lang="ts">
-    import  Router  from 'svelte-spa-router';
-    import routes from './routes';
+    import { Router, Route } from "svelte-routing";
+    import { routes } from './routes';
 
-    import Info from './widgets/Info.svelte';
-    import Header from './widgets/Header.svelte';
+    import Comic from "./pages/Comic.svelte";
 
-    console.log(routes);
-    
 </script>
 
-<Info />
-<Header />
-<main>
-    <Router {routes} />
-</main>
+<Router>
+    {#each routes as { path, component, label } }
+        <Route path={path} component={component} />
+    {/each}
+    <Route path={'/comic'} component={Comic} />
+</Router>

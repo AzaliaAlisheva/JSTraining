@@ -22,3 +22,55 @@
         </div>
         </div>
 </div>
+
+<style>
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+        position: relative;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: black;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        margin-left: 3px;
+    }
+
+    /* Container around content */
+    .container {
+        left: 70px;
+        padding: 10px 0;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        max-width: 450px;
+    }
+
+    /* The circles on the timeline */
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 20px;
+        left: -60px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline span {
+        margin-right: 10px;
+    }
+
+    #education span {
+        background-color: #FF9F55;
+    }
+
+</style>

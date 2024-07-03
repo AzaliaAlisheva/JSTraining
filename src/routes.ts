@@ -4,14 +4,16 @@ import Labs from './pages/Labs.svelte';
 import Photos from './pages/Photos.svelte';
 import Portfolio from './pages/Portfolio.svelte';
 
+interface Route {
+    path: string,
+    component: typeof Home,
+    label: string,
+}
 
-const routes = {
-    '/': Home,
-    '/about': About,
-    '/labs': Labs,
-    '/photos': Photos,
-    '/portfolio': Portfolio,
-//   '*': NotFound,
-};
-
-export default routes;
+export const routes: Route[] = [
+    { path: '/', component: Home, label: 'Home'},
+    { path: '/about', component: About, label: 'About'},
+    { path: '/photos', component: Photos, label: 'Photos'},
+    { path: '/portfolio', component: Portfolio, label: 'Portfolio'},
+    { path: '/labs', component: Labs, label: 'Labs'},
+];
