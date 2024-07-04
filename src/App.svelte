@@ -10,5 +10,5 @@
     {#each routes as { path, component } }
         <Route path={path} component={component} />
     {/each}
-    <Route path={'/comic'} component={Comic} />
+    <Route path={'JSTraining/comic'} component={Comic} />
 </Router>

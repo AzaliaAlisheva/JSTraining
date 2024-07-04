@@ -11,9 +11,9 @@ interface Route {
 }
 
 export const routes: Route[] = [
-    { path: '/', component: Home, label: 'Home'},
-    { path: '/about', component: About, label: 'About'},
-    { path: '/photos', component: Photos, label: 'Photos'},
-    { path: '/portfolio', component: Portfolio, label: 'Portfolio'},
-    { path: '/labs', component: Labs, label: 'Labs'},
+    { path: 'JSTraining/*', component: Home, label: 'Home'},
+    { path: 'JSTraining/about', component: About, label: 'About'},
+    { path: 'JSTraining/photos', component: Photos, label: 'Photos'},
+    { path: 'JSTraining/portfolio', component: Portfolio, label: 'Portfolio'},
+    { path: 'JSTraining/labs', component: Labs, label: 'Labs'},
 ];

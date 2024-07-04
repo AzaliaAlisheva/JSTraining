@@ -1,7 +1,7 @@
 /// <reference types="svelte" />
 import App from './App.svelte'
 
-import '../style.css'
+import '../JSTraining/style.css'
 
 const app = new App({
   target: document.getElementById('app')!,

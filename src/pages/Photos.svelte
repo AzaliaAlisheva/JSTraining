@@ -45,7 +45,7 @@
 </script>
 
 <Info />
-<Header disabledLabel="Photo"/>
+<Header disabledLabel="Photos"/>
 <main>
     <div id="photos">
         {#each photos as photo}
