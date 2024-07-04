@@ -91,4 +91,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
-          exclude_assets: '.github,**/.gitignore'
+          exclude_assets: '.github,**/.gitignore,.stylelintignore,.stylelintrc.json,eslint.config.js,package.json,package-lock.json,rollup.config.js,tsconfig.json'
