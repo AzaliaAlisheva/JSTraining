@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "stylelint-config-standard"
+    ],
+    "overrides": [
+        {
+        "files": ["src/**/*.svelte"],
+        "customSyntax": "postcss-html"
+        }
+    ]
+}
