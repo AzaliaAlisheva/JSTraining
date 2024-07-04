@@ -1,5 +1,6 @@
 {
   "name": "jstraining",
+  "homepage": "https://github.com/AzaliaAlisheva/JSTraining",
   "version": "1.0.0",
   "main": "main.ts",
   "scripts": {
