@@ -3,7 +3,7 @@ import terser from '@rollup/plugin-terser';
 
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import svelte from 'rollup-plugin-svelte';
-import { sveltePreprocess } from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 
 import css from 'rollup-plugin-css-only';
 

@@ -113,39 +113,3 @@ ul {
     margin: 10px;
     vertical-align: middle;
 }
-
-#img-info {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 30px;
-    text-align: left;
-}
-
-#comic {
-    text-align: center;
-}
-
-#comic img {
-    max-height: 80vh;
-    max-width: 80%;
-}
-
-#from-now {
-    font-weight: normal;
-    margin-top: 8px;
-}
-
-#img-info label{
-    display: flow;
-}
-
-#comic-title {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 25px 0;
-}
-
-#release-date {
-    font-weight: bold;
-    margin-top: 20px;
-}

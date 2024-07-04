@@ -7,7 +7,7 @@
 </script>
 
 <Router>
-    {#each routes as { path, component, label } }
+    {#each routes as { path, component } }
         <Route path={path} component={component} />
     {/each}
     <Route path={'/comic'} component={Comic} />

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import { formatDistanceToNow } from "date-fns";
     import BackHeader from '../widgets/BackHeader.svelte';
 
@@ -28,52 +27,80 @@
         return fetch('https://fwd.innopolis.university/api/comic?' + params.toString()).then(r => r.json());
     }
 
-    function createImg(src: string, alt: string) {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = alt;
-        return img;
-    }
-
     function createDateString(event: Date) {
         const options = {
             day: 'numeric',
             month: 'numeric',
             year: 'numeric',
         } as const;
-        const date = document.createElement('label');
-        date.textContent = event.toLocaleDateString(undefined, options);
-        date.id = 'release-date';
-        return date;
+        return event.toLocaleDateString(undefined, options);
     }
 
     async function display() {
         const id: number = await fetchId('a.alisheva@innopolis.university');
         const info: Info = await fetchInfo(id);
         console.log(info);
-        const comic = document.getElementById('comic') as HTMLElement;
-        comic.insertBefore(createImg(info.img, info.alt), comic.firstChild);
-
-        const displayedInfo = document.getElementById('imgInfo') as HTMLDivElement;
-        displayedInfo.textContent = '';
-        const title = document.createElement('label');
-        title.textContent = info.safe_title;
-        title.id = "comic-title";
-        displayedInfo.appendChild(title);
 
         const event = new Date(Date.UTC(info.year, info.month - 1, info.day));
-        displayedInfo.appendChild(createDateString(event));
-
-        const fromNow = document.createElement('label');
-        fromNow.id = "from-now";
-        fromNow.textContent = `Released ${formatDistanceToNow(event)} ago`;
-        displayedInfo.appendChild(fromNow);
+        return {info, event};
     }
 
-    onMount(display);
+    let promise = display();
 </script>
 
 <BackHeader />
 <main class="full" id="comic">
-    <div id="img-info">Loading...</div>
+    {#await promise}
+        <p>Loading...</p>
+    {:then {info, event}}
+        <figure>
+            <img src={info.img} alt={info.alt}>
+            <figcaption id="img-info">
+                <h3 id="comic-title">{info.safe_title}</h3>
+                <p id="release-date">{createDateString(event)}</p>
+                <p id="from-now">{`Released ${formatDistanceToNow(event)} ago`}</p>
+            </figcaption>
+        </figure>
+        
+        <div id="img-info">
+            
+        </div>
+    {:catch error}
+        <p style="color: red">{error.message}</p>
+    {/await}
 </main>
+
+<style>
+    #img-info {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    #comic {
+        text-align: center;
+    }
+
+    #comic img {
+        max-height: 80vh;
+        max-width: 80%;
+    }
+
+    #from-now {
+        font-weight: normal;
+        margin-top: 8px;
+    }
+
+    #comic-title {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+
+    #release-date {
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+</style>
