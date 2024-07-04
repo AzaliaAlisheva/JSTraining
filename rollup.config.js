@@ -11,7 +11,7 @@ export default [
     {
         input: 'src/main.ts',
         output: { 
-            file: 'dist/main.js', 
+            file: 'JSTraining/dist/main.js', 
             format: 'iife',
             name: 'app',
         },

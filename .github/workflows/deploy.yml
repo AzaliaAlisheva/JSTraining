@@ -64,8 +64,6 @@ jobs:
         run: npm install
 
       - name: Build project
-        env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
         run: npm run build
 
       - name: Upload artifacts
@@ -91,6 +89,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: JSTraining
           publish_branch: gh-pages
           exclude_assets: '.github,**/.gitignore,.stylelintignore,.stylelintrc.json,eslint.config.js,package.json,package-lock.json,rollup.config.js,tsconfig.json'

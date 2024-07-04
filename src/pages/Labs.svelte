@@ -10,6 +10,6 @@
 <main>
     <h2>Labs</h2>
     <ul id="labs">
-        <li><Link to="/comic">Comic</Link></li>
+        <li><Link to="JSTraining/comic">Comic</Link></li>
     </ul>
 </main>
