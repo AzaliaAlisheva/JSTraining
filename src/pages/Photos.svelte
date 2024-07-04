@@ -19,7 +19,7 @@
         { src: "photos/evil.jpg", alt: "Evil" },
         { src: "photos/halloween.jpg", alt: "Halloween" },
         { src: "photos/halloween2.jpg", alt: "Halloween" },
-        { src: "photos/halloween3.JPG", alt: "Halloween" },
+        { src: "photos/halloween3.jpg", alt: "Halloween" },
         { src: "photos/inno.jpg", alt: "Inno" },
         { src: "photos/inno2.jpg", alt: "Inno" },
         { src: "photos/inno3.jpg", alt: "Inno" },
