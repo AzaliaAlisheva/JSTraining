@@ -1,0 +1,121 @@
+#info.svelte-cemdps img.svelte-cemdps{width:95%;border-radius:50%;margin-bottom:10%;margin-top:20%;border:8px solid white}#contact.svelte-cemdps.svelte-cemdps{width:100%;margin:15px 0;padding:5px;border-color:grey;border-width:1.5px;border-radius:10px;background-color:white}#shortabout.svelte-cemdps.svelte-cemdps{margin:8px 0;line-height:20px;text-align:justify;font-size:medium;font-family:'Courier New', Courier, monospace;background-color:white}#info.svelte-cemdps.svelte-cemdps{position:sticky;top:0;width:250px;background-color:aqua;padding:0 50px;font-size:x-large;float:left;height:100vh}
+#stack.svelte-1lxxu7k img.svelte-1lxxu7k{height:50px}#stack.svelte-1lxxu7k ul.svelte-1lxxu7k{padding:0;margin:0}#stack.svelte-1lxxu7k li.svelte-1lxxu7k{display:inline-block;width:50px;height:50px;padding:20px;text-align:center;position:relative}#stack.svelte-1lxxu7k li.svelte-1lxxu7k:hover::before{border-bottom:6px solid #1f364d;border-left:8px solid transparent;border-right:8px solid transparent;bottom:12px;content:"";height:0;left:50%;margin-left:-8px;position:absolute;width:0}#stack.svelte-1lxxu7k li.svelte-1lxxu7k:hover::after{background:#1f364d;border-radius:4px;bottom:-13px;color:white;content:attr(data-tooltip);left:0;padding:4px 8px;position:absolute;width:80%}
+.timeline.svelte-cn62ap.svelte-cn62ap{position:relative}.timeline.svelte-cn62ap.svelte-cn62ap::after{content:'';position:absolute;width:6px;background-color:black;top:0;bottom:0;left:20px;margin-left:3px}.container.svelte-cn62ap.svelte-cn62ap{left:70px;padding:10px 0;position:relative;background-color:inherit;width:50%;max-width:450px}.container.svelte-cn62ap.svelte-cn62ap::after{content:'';position:absolute;width:25px;height:25px;background-color:white;border:4px solid #FF9F55;top:20px;left:-60px;border-radius:50%;z-index:1}.timeline.svelte-cn62ap span.svelte-cn62ap{margin-right:10px}#education.svelte-cn62ap span.svelte-cn62ap{background-color:#FF9F55}
+#teamprojects.svelte-1uqcvvm ul.svelte-1uqcvvm{grid-template-columns:1fr 1fr 1.6fr}#aiijc.svelte-1uqcvvm.svelte-1uqcvvm{grid-row:1 / 3;grid-column:1 / 3}
+#personalprojects.svelte-j74qlg ul.svelte-j74qlg{grid-template-columns:1.6fr 1fr 1fr}#maps.svelte-j74qlg.svelte-j74qlg{grid-row:1 / 3;grid-column:2 / 4}
+#img-info.svelte-1gyybx5.svelte-1gyybx5{display:inline-block;vertical-align:top;margin-left:30px;text-align:left}#comic.svelte-1gyybx5.svelte-1gyybx5{text-align:center}#comic.svelte-1gyybx5 img.svelte-1gyybx5{max-height:80vh;max-width:80%}#from-now.svelte-1gyybx5.svelte-1gyybx5{font-weight:normal;margin-top:8px}#comic-title.svelte-1gyybx5.svelte-1gyybx5{font-weight:bold;text-transform:uppercase;margin:25px 0}#release-date.svelte-1gyybx5.svelte-1gyybx5{font-weight:bold;margin-top:20px;margin-bottom:0}
+body {
+    margin: 0;
+}
+
+main {
+    margin-left: 350px;
+    padding: 10px 20px;
+}
+
+header {
+    margin-left: 350px;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+}
+
+header nav {
+    padding: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+header a:hover {
+    text-shadow: 0 0 10px #fdec6e;
+    color: #fdec6e;
+}
+
+.disabled {
+    pointer-events: none;
+    color: #FF9F55;
+}
+
+.logo {
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.link {
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    line-height: 20px;
+    background-color: #FF9F55;
+    margin-right: 10px;
+}
+
+
+#education h2, #experience h2, #personalprojects h2 {
+    margin-top: 50px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+#photos figure {
+    display: inline-block;
+    margin: 20px;
+}
+
+#photos img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+#teamprojects ul, #personalprojects ul{
+    display: grid;
+    grid-template-rows: 210px 210px;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#teamprojects li, #personalprojects li {
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+#teamprojects h4, #personalprojects h4 {
+    margin-bottom: 0;
+}
+
+#teamprojects span, #personalprojects span {
+    color: blue;
+    font-weight: bold;
+}
+
+#teamprojects a, #personalprojects a {
+    color: black;
+    word-break: break-all;
+}
+
+.flow {
+    display: flow;
+}
+
+.full {
+    margin-left: 0;
+}
+
+.headericon {
+    height: 50px;
+    margin: 10px;
+    vertical-align: middle;
+}
