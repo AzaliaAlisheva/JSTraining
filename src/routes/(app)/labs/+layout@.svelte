@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import BackHeader from '$lib/components/BackHeader.svelte';
 </script>
 
-<BackHeader backHref="\labs" />
+<BackHeader backHref="{base}/labs" />
 
 <slot></slot>
 
