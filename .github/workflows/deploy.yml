@@ -70,7 +70,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           name: github-pages
-          path: build/
+          path: 'build/'
 
   deploy:
     runs-on: ubuntu-latest
@@ -84,3 +84,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
