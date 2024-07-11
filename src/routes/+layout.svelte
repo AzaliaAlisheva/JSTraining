@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <meta name="author" content="Azalia Alisheva">
+	<meta name="author" content="Azalia Alisheva" />
 </svelte:head>
 
 <slot></slot>

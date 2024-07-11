@@ -6,7 +6,7 @@
 <BackHeader backHref="{base}/labs" />
 
 <svelte:head>
-  <link rel="icon" href="../favicon.png">
+	<link rel="icon" href="../favicon.png" />
 </svelte:head>
 
 <slot></slot>
