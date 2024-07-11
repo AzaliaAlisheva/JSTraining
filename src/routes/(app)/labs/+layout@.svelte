@@ -5,6 +5,10 @@
 
 <BackHeader backHref="{base}/labs" />
 
+<svelte:head>
+  <link rel="icon" href="../favicon.png">
+</svelte:head>
+
 <slot></slot>
 
 <footer>Hey there, I'm using What's up!</footer>

@@ -24,6 +24,11 @@
 	}
 </script>
 
+<svelte:head>
+  <title>Comic</title>
+  <meta name="description" content="Demonstration of fetching" />
+</svelte:head>
+
 <main class="full" id="comic">
 	<figure>
 		<img src={info.img} alt={info.alt} />
