@@ -13,9 +13,10 @@
 		"prepare": "husky"
 	},
 	"lint-staged": {
-		"*": [
-			"prettier --check",
-			"eslint"
+		"!(.husky/*)": [
+			"prettier --write",
+			"eslint --fix",
+			"git add"
 		]
 	},
 	"devDependencies": {
