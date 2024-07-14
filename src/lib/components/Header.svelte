@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
-	// export let disabledLabel = 'Home';
 </script>
 
 <header>

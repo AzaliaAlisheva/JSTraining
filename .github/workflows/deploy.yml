@@ -37,7 +37,7 @@ jobs:
 
       - name: Run svelte-check
         run: npm run check
-  build:
+  test:
     runs-on: ubuntu-latest
     needs: check
     steps:
@@ -60,30 +60,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
-        run: npm run build
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: github-pages
-          path: build
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Run tests
+        run: npm test
